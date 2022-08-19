@@ -1,7 +1,6 @@
 package ru.kata.spring.boot_security.demo.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -40,5 +39,14 @@ public class User {
     }
 
     public User() {
+    }
+
+    public User(long id, String username, String password, String firstName, String lastName, Set<Role> roles) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.roles = roles;
     }
 }
